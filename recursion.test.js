@@ -19,6 +19,9 @@ describe("product", function() {
 
 describe("longest", function() {
   it("returns the length of the longest word in an array of words", function() {
+
+    debugger
+    
     expect(longest(["hello", "hi", "hola"])).toBe(5);
     expect(longest(["abcdefg", "hijklmnop", "qrs", "tuv", "wx", "y", "z"])).toBe(9);
     expect(longest(["a", "b", "c", "d", "e"])).toBe(1);

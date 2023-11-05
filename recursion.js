@@ -14,6 +14,49 @@ function product(nums, i=0) {
 
 function longest(words) {
 
+  // ITERATIVE
+
+  // let longestWordLength = 0;
+
+  // for (let word of words){
+
+  //   if (word.length > longestWordLength) {
+  //     longestWordLength = word.length
+  //   }
+
+  // }
+
+  // return longestWordLength;
+
+  // RECURSIVE
+  let longestWordLength = 0;
+
+  function findLongest(wordList) {
+
+    if (words.length === 0) {
+
+      return;
+  
+    } else {
+  
+      const currentWord = words.pop();
+  
+      if (currentWord.length > longestWordLength) {
+  
+        longestWordLength = currentWord.length
+  
+      }
+  
+      findLongest(wordList)
+  
+    }
+
+  }
+
+  findLongest([...words]);
+
+  return longestWordLength;
+
 }
 
 /** everyOther: return a string with every other letter. */
