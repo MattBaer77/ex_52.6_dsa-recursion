@@ -144,6 +144,14 @@ function findIndex(arr, val, count=0) {
 
 function revString(str) {
 
+  if(str.length ===0){
+
+    return str
+    
+  }
+
+  return revString(str.substring(1)) + str[0]
+
 }
 
 /** gatherStrings: given an object, return an array of all of the string values. */
