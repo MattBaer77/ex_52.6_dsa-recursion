@@ -116,7 +116,27 @@ function isPalindrome(str) {
 
 /** findIndex: return the index of val in arr (or -1 if val is not present). */
 
-function findIndex(arr, val) {
+function findIndex(arr, val, count=0) {
+
+  if (arr.length === 0){
+
+    return -1;
+
+  }
+
+  if (arr[0] === val) {
+
+    return count;
+
+  } else {
+
+    count ++
+    truncatedArr = [...arr]
+    truncatedArr.shift()
+
+    return findIndex(truncatedArr, val, count)
+
+  }
 
 }
 
