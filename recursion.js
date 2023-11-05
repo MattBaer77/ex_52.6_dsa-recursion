@@ -63,11 +63,54 @@ function longest(words) {
 
 function everyOther(str) {
 
+  let skip = false;
+  let returnString = ""
+
+  function checkAndToggle(string) {
+
+    if (string.length === 0) {
+
+      return;
+
+    } else {
+
+      const letter = string [0];
+      string = string.substring(1)
+
+      if (skip === false) {
+        returnString = returnString + letter
+      }
+
+      skip = !skip
+
+      checkAndToggle(string)
+
+    }
+
+  }
+
+  checkAndToggle(str)
+
+  return returnString;
+
 }
 
 /** isPalindrome: checks whether a string is a palindrome or not. */
 
 function isPalindrome(str) {
+
+  if (str.length === 0) {
+    return true
+  }
+
+  if (str[0] !== str[(str.length-1)]){
+    return false
+  }
+
+  str = str.substring(1)
+  str = str.substring(0, (str.length - 1))
+
+  return isPalindrome(str)
 
 }
 

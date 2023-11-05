@@ -21,7 +21,7 @@ describe("longest", function() {
   it("returns the length of the longest word in an array of words", function() {
 
     debugger
-    
+
     expect(longest(["hello", "hi", "hola"])).toBe(5);
     expect(longest(["abcdefg", "hijklmnop", "qrs", "tuv", "wx", "y", "z"])).toBe(9);
     expect(longest(["a", "b", "c", "d", "e"])).toBe(1);
@@ -29,30 +29,30 @@ describe("longest", function() {
   });
 });
 
-// describe("everyOther", function() {
-//   it("returns a string with every other character in the input", function() {
-//     expect(everyOther("hello")).toBe("hlo");
-//     expect(everyOther("banana stand")).toBe("bnn tn");
-//     expect(everyOther("ddoouubbllee")).toBe("double");
-//     expect(everyOther("hi")).toBe("h");
-//     expect(everyOther("z")).toBe("z");
-//   });
-// });
+describe("everyOther", function() {
+  it("returns a string with every other character in the input", function() {
+    expect(everyOther("hello")).toBe("hlo");
+    expect(everyOther("banana stand")).toBe("bnn tn");
+    expect(everyOther("ddoouubbllee")).toBe("double");
+    expect(everyOther("hi")).toBe("h");
+    expect(everyOther("z")).toBe("z");
+  });
+});
 
-// describe("isPalindrome", function() {
-//   it("returns true if the string is a palindrome", function() {
-//     expect(isPalindrome("tacocat")).toBe(true);
-//     expect(isPalindrome("racecar")).toBe(true);
-//     expect(isPalindrome("a")).toBe(true);
-//     expect(isPalindrome("helloolleh")).toBe(true);
-//   });
+describe("isPalindrome", function() {
+  it("returns true if the string is a palindrome", function() {
+    expect(isPalindrome("tacocat")).toBe(true);
+    expect(isPalindrome("racecar")).toBe(true);
+    expect(isPalindrome("a")).toBe(true);
+    expect(isPalindrome("helloolleh")).toBe(true);
+  });
 
-//   it("returns false if the string is not a palindrome", function() {
-//     expect(isPalindrome("tacodog")).toBe(false);
-//     expect(isPalindrome("az")).toBe(false);
-//     expect(isPalindrome("goodbye")).toBe(false);
-//   });
-// });
+  it("returns false if the string is not a palindrome", function() {
+    expect(isPalindrome("tacodog")).toBe(false);
+    expect(isPalindrome("az")).toBe(false);
+    expect(isPalindrome("goodbye")).toBe(false);
+  });
+});
 
 // describe("findIndex", function() {
 //   let animals = ["duck", "cat", "pony", "cat"];
