@@ -147,7 +147,7 @@ function revString(str) {
   if(str.length ===0){
 
     return str
-    
+
   }
 
   return revString(str.substring(1)) + str[0]
@@ -156,7 +156,48 @@ function revString(str) {
 
 /** gatherStrings: given an object, return an array of all of the string values. */
 
-function gatherStrings(obj) {
+function gatherStrings(obj, arr=[]) {
+
+  console.log("running")
+
+  if(Object.keys(obj).length === 0){
+
+    console.log("END!")
+    console.log(arr)
+    return arr;
+
+  }
+
+  for (let key of Object.keys(obj)){
+
+    console.log("made loop")
+    console.log(obj)
+    console.log(key)
+
+    if(typeof(obj[key]) === 'object'){
+
+      console.log('object detected!')
+
+      console.log(obj[key])
+      gatherStrings(obj[key], arr)
+
+    } else if(typeof(obj[key]) === 'string') {
+
+      console.log('string detected!')
+
+      console.log(obj[key])
+      arr.push(obj[key]);
+      console.log(arr)
+
+    } else {
+
+      console.log("IDK")
+
+    }
+
+  }
+
+  return arr
 
 }
 
