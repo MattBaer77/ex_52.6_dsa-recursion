@@ -87,8 +87,6 @@ describe("gatherStrings", function() {
       color: "black",
       barks: false
     };
-    console.log(gatherStrings(whiskey))
-
     expect(gatherStrings(whiskey).sort()).toEqual(["Whiskey", "popcorn", "black"].sort());
   });
 
